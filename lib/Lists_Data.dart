@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Quote_Class.dart';
 
 void main() => MaterialApp(
       theme: ThemeData(
@@ -15,10 +16,8 @@ class Lists_of_Data extends StatefulWidget {
 }
 
 class _Lists_of_DataState extends State<Lists_of_Data> {
-  List<String> quotes = [
-    "Get busy living or get busy dying.",
-    "You only live once, but if you do it right, once is enough.",
-    "Life is what happens when you’re busy making other plans."
+  List<Quote> quotes = [
+    Quote(text: "Turn your wounds into wisdom.", author: "Oprah Winfrey")
   ];
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,9 @@ class _Lists_of_DataState extends State<Lists_of_Data> {
         centerTitle: true,
       ),
       body: Column(
-        children: quotes.map((quote) => Text(quote)).toList(),
+        children: quotes
+            .map((quote) => Text("${quote.text}- ${quote.author}"))
+            .toList(),
       ),
     );
   }
