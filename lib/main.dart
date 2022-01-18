@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'First_app.dart';
+import 'Lists_Data.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -13,6 +14,7 @@ void main() => runApp(MaterialApp(
         '/': (context) => MyApp(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/second': (context) => NanjaCard(),
+        '/third': (context) => Lists_of_Data(),
       },
     ));
 

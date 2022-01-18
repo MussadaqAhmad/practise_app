@@ -86,6 +86,12 @@ class _NanjaCardState extends State<NanjaCard> {
                 ),
               ],
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Alignment.bottomLeft;
+                  Navigator.pushNamed(context, "/third");
+                },
+                child: Icon(Icons.arrow_forward_ios))
           ],
         ),
       ),
